@@ -1,6 +1,6 @@
 from selenium import webdriver
 import time
-
+from selenium.webdriver.support.select import Select   
 
 class Teste:
     def __init__(self):
@@ -41,9 +41,16 @@ class Teste:
 
         # <td class="ThemeOfficeMainItem" onmouseover="cmItemMouseOver (this,'ThemeOffice',1,'cmSubMenuID1','hbr',0)" onmousemMouseout="cmIteOut (this,500)" onmousedown="cmItemMouseDown (this,0)" onmouseup="cmItemMouseUp (this,0)"><span class="ThemeOfficeMainFolderLeft"><img src="/sigaa/img/icones/ensino_menu.gif"></span><span class="ThemeOfficeMainFolderText">Ensino</span><span class="ThemeOfficeMainFolderRight">&nbsp;</span></td>
         # menu_form_menu_discente_j_id_jsp_340461267_98_menu
-        achar_ensino = self.driver.find_element_by_class_name('ThemeOfficeMainItem')
-        achar_ensino.click()
-        time.sleep(2)
+        # achar_ensino = self.driver.find_element_by_class_name('ThemeOfficeMainItem')
+        # achar_ensino.click()
+        # time.sleep(2)
+
+        achar_matricula = self.driver.find_element_by_xpath("//*[@id='menu_form_menu_discente_j_id_jsp_340461267_98_menu']/table/tbody/tr/td[1]/span[2]")
+        achar_matricula.click()
+        time.sleep(1)
+        testao = self.driver.find_element_by_xpath("//*[@id='cmSubMenuID1']/table/tbody/tr[4]")
+        testao.click()
+        time.sleep(1)
 
 bot = Teste()
 bot.EnviarMensagens()
