@@ -4,8 +4,8 @@ from selenium.webdriver.support.select import Select
 
 class Teste:
     def __init__(self):
-        self.mensagem_usuario = "180122908"
-        self.mensagem_senha = "Kalmar91"
+        self.login_usuario = "180122908"
+        self.login_senha = "Kalmar91"
         options = webdriver.ChromeOptions()
         options.add_argument('lang=pt-br')
         self.driver = webdriver.Chrome(executable_path=r'./chromedriver.exe')
@@ -22,12 +22,12 @@ class Teste:
         caixa_usuario = self.driver.find_element_by_id('username')
         time.sleep(1)
         caixa_usuario.click()
-        caixa_usuario.send_keys(self.mensagem_usuario)
+        caixa_usuario.send_keys(self.login_usuario)
         time.sleep(1)
         caixa_senha = self.driver.find_element_by_id('password')
         time.sleep(1)
         caixa_senha.click()
-        caixa_senha.send_keys(self.mensagem_senha)
+        caixa_senha.send_keys(self.login_senha)
         time.sleep(1)
         botao_enviar = self.driver.find_element_by_xpath("//button[@name='submit']")
         time.sleep(1)
