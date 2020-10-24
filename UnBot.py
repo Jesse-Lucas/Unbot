@@ -2,7 +2,7 @@ from selenium import webdriver
 import time
 from selenium.webdriver.support.select import Select   
 
-class Teste:
+class LoginSigaa:
     def __init__(self):
         self.login_usuario = "180122908"
         self.login_senha = "Kalmar91"
@@ -48,10 +48,10 @@ class Teste:
         achar_matricula = self.driver.find_element_by_xpath("//*[@id='menu_form_menu_discente_j_id_jsp_340461267_98_menu']/table/tbody/tr/td[1]/span[2]")
         achar_matricula.click()
         time.sleep(1)
-        testao = self.driver.find_element_by_xpath("//*[@id='cmSubMenuID1']/table/tbody/tr[4]")
+        testao = self.driver.find_element_by_xpath("//*[@id='cmSubMenuID1']/table/tbody/tr[5]")
         testao.click()
         time.sleep(1)
 
-bot = Teste()
+bot = LoginSigaa()
 bot.EnviarMensagens()
 
